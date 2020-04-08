@@ -18,16 +18,21 @@
   </div>
 
   <script>
+    let start;
+
     document.getElementById('start_stop').addEventListener('click', function(){
-      let start = new Date();
+      start = new Date();
 
      setInterval(goTimer, 10);
     });
 
     let goTimer = function(){
       let now = new Date();
-      document.getElementById('timer').innerHTML = now.getTime();
+      let milli  = now.getTime() - start.getTime();
+      let seconds = Math.floor(milli / 1000);
+      document.getElementById('timer').innerHTML = seconds;
     }
+
   </script>
 </body>
 </html>
