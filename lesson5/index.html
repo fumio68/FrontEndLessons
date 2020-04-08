@@ -13,8 +13,12 @@
     <h1>TODAY</h1>
   </header>
   <div class="container">
-    <p class="date">20xx/01/23</p>
+    <script>
+      let today = new Date();
+      let todayHtml = today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate();
+      document.write('<p class="date">' + todayHtml + '</p>')
+    </script>
   </div>
-  
+
 </body>
 </html>
