@@ -16,5 +16,14 @@
       <button id="start" class="btn btn-lg btn-primary">START</button>
     </div>
   </div>
+
+  <script>
+    let now = new Date();
+    let seconds = now.getSeconds();
+    if (seconds < 10) {
+      seconds = "0" + seconds
+    }
+    document.getElementById('timer').innerHTML = seconds;
+  </script>
 </body>
 </html>
